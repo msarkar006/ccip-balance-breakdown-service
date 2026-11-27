@@ -1,0 +1,33 @@
+@use '@carbon/styles/scss/spacing';
+@use '@carbon/styles/scss/theme';
+
+.pageHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: spacing.$spacing-05;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: spacing.$spacing-07;
+}
+
+.accountSelectorContainer {
+  min-width: 250px;
+}
+
+.cardSubtitle {
+  color: theme.$text-helper;
+  margin-top: spacing.$spacing-02;
+}
+
+.errorContainer {
+  margin-bottom: spacing.$spacing-07;
+}
+
+.sectionContainer {
+  margin-bottom: spacing.$spacing-07;
+}
+
+.placeholderTile {
+  background: theme.$layer-01;
+  padding: spacing.$spacing-05;
+}

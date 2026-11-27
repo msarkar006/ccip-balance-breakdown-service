@@ -1,0 +1,58 @@
+@use '@carbon/styles/scss/spacing';
+@use '@carbon/styles/scss/theme';
+
+.sidebar {
+  position: fixed;
+  top: 3rem;
+  bottom: 0;
+  left: 0;
+  width: 16rem;
+  background: theme.$layer-01;
+  border-right: 1px solid theme.$border-subtle-01;
+  z-index: 7000;
+  overflow-y: auto;
+  display: block;
+
+  @media (max-width: 65.99rem) {
+    display: none;
+    
+    &.open {
+      display: block;
+    }
+  }
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: spacing.$spacing-03 0;
+}
+
+.navItem {
+  // No styles needed for li
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: spacing.$spacing-03 spacing.$spacing-05;
+  color: theme.$text-secondary;
+  border-left: 3px solid transparent;
+  background: transparent;
+  font-weight: 400;
+  text-decoration: none;
+
+  &:hover {
+    background: theme.$layer-hover-01;
+    color: theme.$text-primary;
+    text-decoration: none;
+  }
+
+  &.active {
+    background: theme.$layer-selected-01;
+    color: theme.$text-primary;
+    font-weight: 600;
+    border-left-color: theme.$border-interactive;
+  }
+}

@@ -1,0 +1,47 @@
+@use '@carbon/styles/scss/spacing';
+@use '@carbon/styles/scss/theme';
+
+.balanceContainer {
+  background: theme.$layer-01;
+  padding: spacing.$spacing-05;
+  border-top: 3px solid theme.$border-interactive;
+}
+
+.balanceLabel {
+  color: theme.$text-secondary;
+}
+
+.balanceAmount {
+  font-variant-numeric: tabular-nums;
+}
+
+.creditLabel {
+  color: theme.$text-secondary;
+  margin-bottom: spacing.$spacing-03;
+}
+
+.progressBar {
+  width: 100%;
+  height: 0.5rem;
+  appearance: none;
+  border: 0;
+  background: theme.$layer-accent-01;
+
+  &::-webkit-progress-bar {
+    background: theme.$layer-accent-01;
+  }
+
+  &::-webkit-progress-value {
+    background: theme.$link-primary;
+  }
+
+  &::-moz-progress-bar {
+    background: theme.$link-primary;
+  }
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: spacing.$spacing-03;
+}

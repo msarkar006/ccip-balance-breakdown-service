@@ -1,0 +1,21 @@
+@use '@carbon/styles/scss/spacing' as *;
+@use '@carbon/styles/scss/theme' as *;
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $spacing-05;
+  padding-top: $spacing-05;
+}
+
+.paginationInfo {
+  color: $text-secondary;
+  font-size: 0.875rem;
+}
+
+.paginationButtons {
+  display: flex;
+  gap: $spacing-03;
+}

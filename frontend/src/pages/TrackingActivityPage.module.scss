@@ -1,0 +1,7 @@
+@use '@carbon/styles/scss/spacing' as *;
+@use '@carbon/styles/scss/theme' as *;
+
+.pageSubtitle {
+  margin-top: $spacing-03;
+  color: $text-secondary;
+}

@@ -1,0 +1,3 @@
+"""
+Direct debit domain module.
+"""

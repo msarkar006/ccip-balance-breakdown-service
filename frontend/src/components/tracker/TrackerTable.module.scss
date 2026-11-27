@@ -1,0 +1,12 @@
+@use '@carbon/styles/scss/spacing' as *;
+@use '@carbon/styles/scss/theme' as *;
+
+.escalationGuidance {
+  margin-top: $spacing-02;
+  color: $text-secondary;
+}
+
+.notification {
+  margin-bottom: $spacing-05;
+  max-width: 100%;
+}

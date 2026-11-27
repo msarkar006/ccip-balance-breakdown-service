@@ -1,0 +1,28 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/type' as *;
+
+.page {
+  padding: $spacing-07 0 $spacing-10;
+  max-width: 99rem;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: $spacing-05;
+}
+
+.title {
+  @include type-style('heading-05');
+  margin: 0;
+}
+
+.subtitle {
+  @include type-style('helper-text-01');
+  color: $text-helper;
+  margin: $spacing-02 0 0 0;
+}

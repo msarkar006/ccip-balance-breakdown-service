@@ -1,0 +1,35 @@
+@use '@carbon/styles/scss/spacing' as *;
+@use '@carbon/styles/scss/theme' as *;
+@use '@carbon/styles/scss/type' as *;
+
+.tile {
+  border-top: 3px solid $border-interactive;
+}
+
+.label {
+  @include type-style('label-01');
+  color: $text-secondary;
+  margin-bottom: $spacing-02;
+}
+
+.programmeName {
+  @include type-style('heading-02');
+  margin: 0;
+}
+
+.points {
+  @include type-style('heading-04');
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: $spacing-03;
+}
+
+.asOf {
+  @include type-style('label-01');
+  color: $text-secondary;
+}

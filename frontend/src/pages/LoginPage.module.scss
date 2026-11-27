@@ -1,0 +1,41 @@
+@use '@carbon/styles/scss/spacing';
+@use '@carbon/styles/scss/theme';
+
+.pageContainer {
+  padding: spacing.$spacing-07 0 spacing.$spacing-10;
+}
+
+.formContainer {
+  background: theme.$layer-01;
+  padding: spacing.$spacing-05;
+}
+
+.helperText {
+  color: theme.$text-helper;
+}
+
+.sectionContainer {
+  background: theme.$layer-01;
+  padding: spacing.$spacing-05;
+}
+
+.sectionHeading {
+  margin-bottom: spacing.$spacing-05;
+}
+
+.sectionHeadingSmall {
+  margin-bottom: spacing.$spacing-03;
+}
+
+.listContainer {
+  padding-left: spacing.$spacing-05;
+  margin: 0;
+}
+
+.listItem {
+  margin-bottom: spacing.$spacing-03;
+}
+
+.listItemLast {
+  margin-bottom: 0;
+}

@@ -1,0 +1,29 @@
+@use '@carbon/styles/scss/spacing';
+
+.layoutContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.pageWithSidebar {
+  margin-left: 16rem;
+  flex: 1;
+  padding-top: var(--cds-spacing-09);
+  transition: margin-left 0.3s ease;
+
+  @media (max-width: 65.99rem) {
+    margin-left: 0;
+  }
+}
+
+.pageNoSidebar {
+  margin-left: 0;
+  flex: 1;
+  padding-top: var(--cds-spacing-09);
+  transition: margin-left 0.3s ease;
+}
+
+.mainContent {
+  padding: spacing.$spacing-07 0 spacing.$spacing-10;
+}

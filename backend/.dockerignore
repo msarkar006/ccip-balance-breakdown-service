@@ -1,0 +1,39 @@
+# Virtual environments
+.venv
+venv
+__pycache__
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Testing
+.pytest_cache
+.mypy_cache
+.ruff_cache
+htmlcov
+.coverage
+
+# Build artifacts
+build
+dist
+*.egg-info
+
+# Database files
+*.db
+*.db-journal
+
+# Environment files (committed dev.env will be used)
+.env
+
+# Test fixtures
+tests/fixtures
+
+# Logs
+*.log
