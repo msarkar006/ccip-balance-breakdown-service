@@ -1,0 +1,52 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/type' as *;
+
+.page {
+  padding: $spacing-07 0 $spacing-10;
+  max-width: 99rem;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: $spacing-05;
+}
+
+.title {
+  @include type-style('heading-05');
+  margin: 0;
+}
+
+.label {
+  @include type-style('label-01');
+  color: $text-secondary;
+}
+
+.totalTile {
+  border-top: 3px solid $border-interactive;
+}
+
+.totalAmount {
+  @include type-style('heading-06');
+  font-variant-numeric: tabular-nums;
+}
+
+.pendingAmount {
+  @include type-style('heading-04');
+  font-variant-numeric: tabular-nums;
+}
+
+.sectionTitle {
+  @include type-style('heading-03');
+  margin: 0;
+}
+
+.helperText {
+  @include type-style('helper-text-01');
+  color: $text-helper;
+  margin: 0;
+}

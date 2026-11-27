@@ -1,0 +1,40 @@
+@use '@carbon/styles/scss/spacing' as *;
+@use '@carbon/styles/scss/theme' as *;
+
+.pageSubtitle {
+  margin-top: $spacing-03;
+  color: $text-secondary;
+}
+
+.notification {
+  margin-bottom: $spacing-05;
+  max-width: 100%;
+}
+
+.sectionHeading {
+  margin: 0 0 $spacing-05 0;
+}
+
+.guidanceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: $spacing-05;
+}
+
+.guidanceItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.guidanceLabel {
+  margin-bottom: $spacing-02;
+  color: $text-secondary;
+}
+
+.guidanceFigure {
+  font-weight: 400;
+}
+
+.accentTile {
+  border-top: 3px solid $border-interactive;
+}

@@ -1,0 +1,11 @@
+@use '@carbon/styles/scss/spacing' as *;
+@use '@carbon/styles/scss/theme' as *;
+
+.notification {
+  margin-bottom: $spacing-05;
+  max-width: 100%;
+}
+
+.actionCell {
+  color: $text-secondary;
+}

@@ -1,0 +1,32 @@
+services:
+  backend:
+    build:
+      context: backend/
+      args:
+        INSTALL_SPEC: .
+    environment:
+      DATABASE_URL: sqlite:////data/app.db
+    env_file:
+      - backend/dev.env
+    volumes:
+      - backend-data:/data
+    ports:
+      - "9000:9000"
+    x-preview-port: 9000
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        BACKEND_HOST: backend
+    environment:
+      BACKEND_HOST: backend
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    x-preview-port: 80
+
+volumes:
+  backend-data:

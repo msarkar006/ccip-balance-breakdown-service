@@ -1,0 +1,24 @@
+services:
+  database:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: ccip_balance
+      POSTGRES_USER: ccip_user
+      POSTGRES_PASSWORD: ccip_password
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: backend/
+      args:
+        INSTALL_SPEC: ".[postgres]"
+    environment:
+      DATABASE_URL: postgresql+psycopg://ccip_user:ccip_password@database:5432/ccip_balance
+    depends_on:
+      - database
+
+volumes:
+  postgres-data:

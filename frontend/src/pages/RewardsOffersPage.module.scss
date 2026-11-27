@@ -1,0 +1,13 @@
+@use '@carbon/styles/scss/spacing' as *;
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: $spacing-05;
+}
+
+.accountSelector {
+  width: 200px;
+}

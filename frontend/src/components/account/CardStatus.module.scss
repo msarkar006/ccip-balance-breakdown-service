@@ -1,0 +1,26 @@
+@use '@carbon/styles/scss/spacing';
+@use '@carbon/styles/scss/theme';
+
+.cardContainer {
+  background: theme.$layer-01;
+  padding: spacing.$spacing-05;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: spacing.$spacing-05;
+}
+
+.fieldLabel {
+  color: theme.$text-secondary;
+}
+
+.fieldValue {
+  margin-top: spacing.$spacing-01;
+}
+
+.fieldValueLarge {
+  margin-top: spacing.$spacing-01;
+  font-variant-numeric: tabular-nums;
+}

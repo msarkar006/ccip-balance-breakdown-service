@@ -1,0 +1,12 @@
+@use '@carbon/styles/scss/spacing' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-05;
+}
+
+.notification {
+  margin-bottom: $spacing-05;
+  max-width: 100%;
+}

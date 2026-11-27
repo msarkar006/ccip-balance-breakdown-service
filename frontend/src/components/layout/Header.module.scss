@@ -1,0 +1,80 @@
+@use '@carbon/styles/scss/spacing';
+@use '@carbon/styles/scss/theme';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 8000;
+  height: 3rem;
+  background: theme.$background-inverse;
+  color: theme.$text-inverse;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid theme.$border-subtle-02;
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 0;
+  color: theme.$text-inverse;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover {
+    background: theme.$layer-hover-02;
+  }
+}
+
+.brandLink {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding: 0 spacing.$spacing-07 0 spacing.$spacing-05;
+  color: theme.$text-inverse;
+  text-decoration: none;
+
+  &:hover {
+    background: theme.$layer-hover-02;
+    text-decoration: none;
+  }
+}
+
+.brandName {
+  font-weight: 600;
+  margin-right: spacing.$spacing-02;
+}
+
+.headerActions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.userEmail {
+  padding: 0 spacing.$spacing-05;
+}
+
+.logoutButton {
+  display: inline-flex;
+  align-items: center;
+  height: 3rem;
+  padding: 0 spacing.$spacing-05;
+  background: transparent;
+  border: 0;
+  color: theme.$text-inverse;
+  font: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background: theme.$layer-hover-02;
+  }
+}
+
+.helpText {
+  padding: 0 spacing.$spacing-05;
+}

@@ -1,0 +1,43 @@
+@use '@carbon/styles/scss/spacing' as *;
+@use '@carbon/styles/scss/theme' as *;
+@use '@carbon/styles/scss/type' as *;
+
+.offerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: $spacing-05;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.offerCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 14rem;
+}
+
+.tags {
+  display: flex;
+  gap: $spacing-03;
+}
+
+.offerTitle {
+  @include type-style('heading-02');
+  margin: 0;
+}
+
+.offerDescription {
+  @include type-style('body-01');
+  margin: 0;
+  flex: 1;
+}
+
+.actions {
+  margin-top: auto;
+}
+
+.empty {
+  @include type-style('body-01');
+  color: $text-secondary;
+}
