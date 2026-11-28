@@ -1,0 +1,30 @@
+# Optional override: PostgreSQL instead of SQLite.
+#   POSTGRES_PASSWORD=... docker compose -f docker-compose.yml -f docker-compose.postgres.yml up --build
+services:
+  database:
+    image: postgres:16.4-alpine
+    environment:
+      POSTGRES_DB: ccip
+      POSTGRES_USER: ccip
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ccip-local-password}
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ccip -d ccip"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+      args:
+        INSTALL_SPEC: ".[postgres]"
+    environment:
+      DATABASE_URL: postgresql+psycopg://ccip:${POSTGRES_PASSWORD:-ccip-local-password}@database:5432/ccip
+    depends_on:
+      database:
+        condition: service_healthy
+
+volumes:
+  pg-data:

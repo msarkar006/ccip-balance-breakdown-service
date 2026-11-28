@@ -1,0 +1,48 @@
+.dr-form {
+  max-width: 40rem;
+}
+
+.dr-form__field {
+  margin-bottom: var(--cds-spacing-06, 1.5rem);
+}
+
+.dr-tile {
+  margin-bottom: var(--cds-spacing-05, 1rem);
+  padding: var(--cds-spacing-05, 1rem);
+  background: var(--cds-layer-01, #f4f4f4);
+}
+
+.dr-tile__title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+  margin: 0;
+}
+
+.dr-tile__dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--cds-spacing-05, 1rem);
+  margin: var(--cds-spacing-04, 0.75rem) 0 0;
+}
+
+.dr-helper {
+  margin-top: var(--cds-spacing-03, 0.5rem);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--cds-text-secondary, #525252);
+}
+
+.dr-mono {
+  font-family: var(--cds-code-01-font-family, 'IBM Plex Mono', Menlo, Consolas, monospace);
+  font-size: 0.8125rem;
+}
+
+.dr-result {
+  margin-top: var(--cds-spacing-05, 1rem);
+}
+
+.dr-empty {
+  padding: var(--cds-spacing-05, 1rem);
+  border: 1px dashed var(--cds-border-strong-01, #8d8d8d);
+}

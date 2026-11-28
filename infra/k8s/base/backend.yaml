@@ -1,0 +1,41 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels: {app: backend}
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: backend}
+  template:
+    metadata:
+      labels: {app: backend}
+    spec:
+      containers:
+        - name: backend
+          image: ccip-backend:latest-set-by-overlay
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef: {name: backend-config}
+            - secretRef: {name: backend-secrets}
+          livenessProbe:
+            httpGet: {path: /health, port: 8000}
+            periodSeconds: 10
+          readinessProbe:
+            httpGet: {path: /health/ready, port: 8000}
+            periodSeconds: 10
+          resources:
+            requests: {cpu: 100m, memory: 192Mi}
+            limits: {memory: 512Mi}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  selector: {app: backend}
+  ports:
+    - port: 8000
+      targetPort: 8000
