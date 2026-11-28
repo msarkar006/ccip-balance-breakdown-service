@@ -1,0 +1,36 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ccip-prod
+resources:
+  - ../../base
+  - namespace.yaml
+images:
+  - name: ccip-backend
+    newName: registry.example.com/ccip/backend
+    newTag: "REPLACE_WITH_RELEASE_TAG"
+  - name: ccip-frontend
+    newName: registry.example.com/ccip/frontend
+    newTag: "REPLACE_WITH_RELEASE_TAG"
+configMapGenerator:
+  - name: backend-config
+    literals:
+      - ENVIRONMENT=prod
+      - DEBUG=false
+      - SEED_ENABLED=false
+      - LOG_LEVEL=INFO
+      - CORS_ORIGINS=https://ccip.example.com
+patches:
+  - target: {kind: Ingress, name: frontend}
+    patch: |-
+      - op: replace
+        path: /spec/rules/0/host
+        value: ccip.example.com
+      - op: replace
+        path: /spec/tls/0/hosts/0
+        value: ccip.example.com
+  - target: {kind: Deployment, name: backend}
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 2

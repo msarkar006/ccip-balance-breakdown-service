@@ -1,0 +1,97 @@
+@tailwind utilities;
+
+/* Page layout only. Component styling comes from Carbon (loaded first in main.tsx). */
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.app-content {
+  padding: 1rem;
+}
+
+@media (min-width: 66rem) {
+  .app-content--nav-open {
+    margin-left: 16rem;
+  }
+}
+
+.login-content {
+  display: flex;
+  justify-content: center;
+}
+
+.login-panel {
+  width: 100%;
+  max-width: 32rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+.page-lead {
+  margin-bottom: 1rem;
+}
+
+.helper-text {
+  font-size: 0.75rem;
+  color: var(--cds-text-secondary, #525252);
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', Menlo, Consolas, monospace;
+}
+
+.boundary-banner {
+  max-width: none;
+  margin-bottom: 1rem;
+}
+
+.header-user {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--cds-icon-primary, #161616);
+}
+
+.labelled-value {
+  padding: 0.5rem 0;
+}
+
+.labelled-value__label {
+  font-size: 0.75rem;
+  color: var(--cds-text-secondary, #525252);
+}
+
+.labelled-value__value {
+  margin: 0;
+}
+
+.data-status-table { width: 100%; border-collapse: collapse; margin-bottom: var(--cds-spacing-03, 0.5rem); }
+.data-status-table caption { text-align: left; padding-bottom: var(--cds-spacing-03, 0.5rem); color: var(--cds-text-secondary, #525252); }
+.data-status-table th, .data-status-table td { padding: var(--cds-spacing-04, 0.75rem) var(--cds-spacing-05, 1rem); text-align: left; vertical-align: top; border-bottom: 1px solid var(--cds-border-subtle-01, #c6c6c6); }
+.data-status-table th { background: var(--cds-layer-01, #f4f4f4); color: var(--cds-text-secondary, #525252); }
+.data-status-tile { padding: var(--cds-spacing-05, 1rem); background: var(--cds-layer-01, #f4f4f4); margin-bottom: var(--cds-spacing-05, 1rem); }
+.data-status-timeline { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-spacing-03, 0.5rem); }
+.data-status-list { list-style: disc; padding-left: var(--cds-spacing-05, 1rem); }
+.data-status-list li { margin-bottom: var(--cds-spacing-03, 0.5rem); }
+.group-title { font-weight: 600; }
+.design-notes { margin-top: var(--cds-spacing-07, 2rem); }
+@media (max-width: 41.99rem) {
+  .data-status-table, .data-status-table thead, .data-status-table tbody, .data-status-table tr, .data-status-table th, .data-status-table td { display: block; }
+  .data-status-table thead { position: absolute; left: -999px; }
+  .data-status-table td { border: 0; padding: var(--cds-spacing-02, 0.25rem) var(--cds-spacing-05, 1rem); }
+  .data-status-table td::before { content: attr(data-label); display: block; font-size: 0.75rem; color: var(--cds-text-secondary, #525252); }
+}
